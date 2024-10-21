@@ -1,9 +1,20 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hsl(210, 36%, 96%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
 .fondo {
     background-color: hsl(212, 45%, 89%);
-    margin: 50px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,50 +23,70 @@
 .card {
     display: grid;
     justify-content: center;
-    width: 270px;
+    align-items: center;
+    width: 240px;
     height: 450px;
     background-color: #fff;
     border-radius: 30px;
     overflow: hidden;
-    
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
-.imgqr{
-    margin: 15px;
+
+.imgqr {
     width: 240px;
-    height: 250px;
-    border-radius: 30px;
+    height: 240px;
+    border-radius: 20px;
     object-fit: cover;
-    
+    margin-bottom: 15px;
 }
-.paragraphs{
-    margin: 20px;
+
+.paragraphs {
     text-align: center;
     font-family: "Outfit", sans-serif;
+    color: hsl(0, 0%, 0%);
 }
 
-p{
-    font-size: small;
+p {
+    font-size: small; 
+    line-height: 1.4;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
     .card {
-        width: auto;  /* Ajusta la tarjeta al ancho de la pantalla */
+        width: 90%;  
+        height: auto;
+        padding: 15px;
+    }
+
+    .imgqr {
+        width: 100%; 
+        height: auto;
+        border-radius: 15px;
+    }
+
+    .paragraphs {
+        margin: 10px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .card {
+        width: 320px;
         height: auto;
     }
 
     .imgqr {
-        width: 240px;  /* La imagen ocupa todo el ancho disponible */
-        height: 240px;
-    }
-
-    .paragraphs {
-        margin: 15px;
+        width: 280px;
+        height: 280px;
     }
 }
 
+
 @media (min-width: 1440px) {
     .card {
-        width: 400px;  /* Amplía la tarjeta para pantallas grandes */
+        width: 400px;
         height: 600px;
     }
 
@@ -65,6 +96,6 @@ p{
     }
 
     .paragraphs {
-        margin: 0px;
+        margin: 0;
     }
 }
