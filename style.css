@@ -1,0 +1,70 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.fondo {
+    background-color: hsl(212, 45%, 89%);
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: grid;
+    justify-content: center;
+    width: 270px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    
+}
+.imgqr{
+    margin: 15px;
+    width: 240px;
+    height: 250px;
+    border-radius: 30px;
+    object-fit: cover;
+    
+}
+.paragraphs{
+    margin: 20px;
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+}
+
+p{
+    font-size: small;
+}
+
+@media (max-width: 375px) {
+    .card {
+        width: auto;  /* Ajusta la tarjeta al ancho de la pantalla */
+        height: auto;
+    }
+
+    .imgqr {
+        width: 240px;  /* La imagen ocupa todo el ancho disponible */
+        height: 240px;
+    }
+
+    .paragraphs {
+        margin: 15px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .card {
+        width: 400px;  /* Amplía la tarjeta para pantallas grandes */
+        height: 600px;
+    }
+
+    .imgqr {
+        width: 360px;
+        height: 360px;
+    }
+
+    .paragraphs {
+        margin: 0px;
+    }
+}
